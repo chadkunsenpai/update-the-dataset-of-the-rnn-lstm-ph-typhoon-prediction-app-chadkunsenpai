@@ -17,11 +17,12 @@ def app():
     st.subheader('RNN-LSTM Based Typhoon Prediction in the Philippines')
     
     text = """
-    Prof. Louie F. Cervantes, M. Eng. (Information Engineering)
-    \nCCS 229 - Intelligent Systems
-    Department of Computer Science
-    College of Information and Communications Technology
-    West Visayas State University
+    Modified by: John Richard B. Palmos (BSCS 3B)
+    \nMade by: Prof. Louie F. Cervantes, M. Eng. (Information Engineering)
+CCS 229 - Intelligent Systems
+Department of Computer Science
+College of Information and Communications Technology
+West Visayas State University
     """
     st.text(text)
 
