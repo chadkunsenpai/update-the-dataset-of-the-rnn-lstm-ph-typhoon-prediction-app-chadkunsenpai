@@ -16,11 +16,13 @@ if "model" not in st.session_state:
 def app():
     st.subheader('RNN-LSTM Based Typhoon Prediction in the Philippines')
     
-    text = """Prof. Louie F. Cervantes, M. Eng. (Information Engineering)
+    text = """
+    Prof. Louie F. Cervantes, M. Eng. (Information Engineering)
     \nCCS 229 - Intelligent Systems
-    *Department of Computer Science
-    *College of Information and Communications Technology
-    *##West Visayas State University##"""
+    Department of Computer Science
+    College of Information and Communications Technology
+    West Visayas State University
+    """
     st.text(text)
 
     text = """This Streamlit app utilizes a bi-directional Recurrent Neural Network 
@@ -178,21 +180,21 @@ def app():
         prednext = [item for sublist in prednext for item in sublist]
 
 
-        # Generate an array of datetime64 objects from January 1976 to December 1976
+        # Generate an array of datetime64 objects from January 2000 to December 2023
         if pred_period == 12:
-            end = '2023-12'
+            end = '2024-12'
         elif pred_period == 24:
-            end = '2024-12' 
+            end = '2025-12' 
         elif pred_period == 36:
-            end = '2025-12'
-        elif pred_period == 48:
             end = '2026-12'
-        elif pred_period == 60:
+        elif pred_period == 48:
             end = '2027-12'
-        elif pred_period == 72:
+        elif pred_period == 60:
             end = '2028-12'
+        elif pred_period == 72:
+            end = '2029-12'
 
-        months = pd.date_range(start='2023-01', end=end, freq='MS')
+        months = pd.date_range(start='2024-01', end=end, freq='MS')
 
         # Create a Pandas DataFrame with the datetime and values columns
         nextyear = pd.DataFrame({'Month': months, 'Typhoons': prednext})
